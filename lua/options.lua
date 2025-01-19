@@ -9,6 +9,9 @@ vim.keymap.set('n', '<leader>pv', vim.cmd.Ex)
 -- <ctrl-s> to Save
 vim.keymap.set({ 'n', 'v', 'i' }, '<C-S>', '<C-c>:update<cr>', { silent = true, desc = 'Save' })
 -- vim.keymap.set("v", "<leader>p", vim.cmd.Ex)
+--
+vim.keymap.set('n', '<S-Down>', '5j')
+vim.keymap.set('n', '<S-Up>', '5k')
 
 vim.keymap.set('n', 'J', 'mzJ`z')
 vim.keymap.set('n', '<C-d>', '<C-d>zz')
@@ -30,3 +33,6 @@ vim.keymap.set('n', 'k', "v:count == 0 ? 'gk' : 'k'", { expr = true, silent = tr
 vim.keymap.set('n', 'j', "v:count == 0 ? 'gj' : 'j'", { expr = true, silent = true })
 
 vim.keymap.set('n', 'jj', 'nop', { desc = 'save index finger' })
+
+vim.keymap.set('n', 'grh', ':Git reset_hunk<CR>')
+vim.keymap.set('n', 'gsh', ':Git stage_hunk<CR>')
